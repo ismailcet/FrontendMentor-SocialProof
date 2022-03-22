@@ -19,13 +19,15 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  font-size: 16px;
-  font-family: var(--ff--primary);
+html {
   background-image: url(images/bg-pattern-top-mobile.svg),
     url(images/bg-pattern-bottom-mobile.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+}
+body {
+  font-size: 16px;
+  font-family: var(--ff--primary);
 }
 ul {
   list-style-type: none;
@@ -120,15 +122,15 @@ a {
 
 /* Desktop */
 @media screen and (min-width: 56em) {
-  body {
+  html {
     background-image: url(images/bg-pattern-top-desktop.svg),
       url(images/bg-pattern-bottom-desktop.svg);
     background-repeat: no-repeat, no-repeat;
-    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+    background-position: right 59vw bottom 83vh, left 50vw top 0vh;
   }
 
   .section {
-    margin: 8rem 10.25rem;
+    margin: 8rem 10.3125rem;
   }
   .section-center {
     display: flex;
@@ -138,12 +140,52 @@ a {
     width: 50%;
   }
   .header-title {
-    font-size: 40px;
+    margin: 0 0 1rem 0;
+    font-size: 50px;
+    text-align: left;
+  }
+  .header-info {
+    text-indent: 0;
+    text-align: left;
+    padding-right: 8.75rem;
   }
   .stars {
     width: 50%;
   }
+  .star {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .star:nth-child(2) {
+    position: relative;
+    left: 2rem;
+  }
+  .star:nth-child(2) .stars-info {
+    margin-left: 0;
+  }
+  .star:last-child {
+    position: relative;
+    left: 4rem;
+  }
   .people {
     width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .person {
+    margin-bottom: 0;
+    width: 350px;
+  }
+  .person:not(.person:last-child) {
+    margin-right: 1.875rem;
+  }
+  #irene {
+    position: relative;
+    top: 1rem;
+  }
+  #anne {
+    position: relative;
+    top: 2rem;
   }
 }
