@@ -20,13 +20,13 @@
   box-sizing: border-box;
 }
 html {
+  font-size: 16px;
   background-image: url(images/bg-pattern-top-mobile.svg),
     url(images/bg-pattern-bottom-mobile.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: right 50vw bottom 50vh, left 50vw top 50vh;
 }
 body {
-  font-size: 16px;
   font-family: var(--ff--primary);
 }
 ul {
@@ -119,9 +119,83 @@ a {
   color: var(--clr-Soft-Pink);
 }
 /* Responsive Design */
-
+/* Tablet */
+@media screen and (max-width: 63em) and (min-width: 40em) {
+  html {
+    background-image: url(images/bg-pattern-top-desktop.svg),
+      url(images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 40vw bottom 60vh, left 50vw top 0vh;
+    font-size: 14px;
+  }
+  body {
+    font-size: 14px;
+  }
+  .section {
+    margin: 5rem 8rem;
+  }
+  .section-center {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .header {
+    width: 50%;
+  }
+  .header-title {
+    margin: 0 0 0.5rem 0;
+    font-size: 30px;
+    text-align: left;
+  }
+  .header-info {
+    text-indent: 0;
+    text-align: left;
+    padding-right: 4.375rem;
+  }
+  .stars {
+    width: 50%;
+  }
+  .star {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .fiveStar {
+    white-space: nowrap;
+  }
+  .star:nth-child(2) {
+    position: relative;
+    left: 1rem;
+  }
+  .star:nth-child(2) .stars-info {
+    margin-left: 0;
+  }
+  .star:last-child {
+    position: relative;
+    left: 2rem;
+  }
+  .people {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .person {
+    margin-bottom: 0;
+    width: 350px;
+  }
+  .person:not(.person:last-child) {
+    margin-right: 0.875rem;
+  }
+  #irene {
+    position: relative;
+    top: 0.5rem;
+  }
+  #anne {
+    position: relative;
+    top: 1rem;
+  }
+}
 /* Desktop */
-@media screen and (min-width: 56em) {
+@media screen and (min-width: 63em) {
   html {
     background-image: url(images/bg-pattern-top-desktop.svg),
       url(images/bg-pattern-bottom-desktop.svg);
@@ -148,6 +222,9 @@ a {
     text-indent: 0;
     text-align: left;
     padding-right: 8.75rem;
+  }
+  .fiveStar {
+    white-space: nowrap;
   }
   .stars {
     width: 50%;
