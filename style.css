@@ -1,0 +1,149 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+/* Global Variables */
+:root {
+  --clr-Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --clr-Soft-Pink: hsl(333, 80%, 67%);
+  --clr-Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --clr-Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --clr-white: hsl(0, 0%, 100%);
+  --ff--primary: "Spartan", sans-serif;
+  --radius: 1rem;
+}
+/* Global Styles */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  font-family: var(--ff--primary);
+  background-image: url(images/bg-pattern-top-mobile.svg),
+    url(images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* Section */
+.section {
+  margin: 4.5rem 1.5rem;
+}
+.header {
+  margin-bottom: 2.5rem;
+}
+.header-title {
+  color: var(--clr-Very-Dark-Magenta);
+  margin: 0 1.8rem;
+  font-weight: bold;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.header-info {
+  font-size: 15px;
+  text-indent: -25px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--clr-Dark-Grayish-Magenta);
+}
+/* Stars */
+.stars {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.star {
+  padding: 1rem 4.5rem;
+  background-color: var(--clr-Light-Grayish-Magenta);
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+.star:last-child {
+  margin-bottom: 0;
+}
+.fiveStar {
+  margin-bottom: 0.625rem;
+}
+.stars-info {
+  white-space: nowrap;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--clr-Very-Dark-Magenta);
+}
+.star:nth-child(2) .stars-info {
+  margin-left: -1rem;
+}
+/* People */
+.person {
+  padding: 2.25rem 1.75rem;
+  background-color: var(--clr-Very-Dark-Magenta);
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  color: var(--clr-Light-Grayish-Magenta);
+  font-size: 15px;
+}
+.person:last-child {
+  margin-bottom: 0;
+}
+.person-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.75rem;
+  font-weight: 500;
+}
+.person-img {
+  border-radius: 50%;
+  width: 40px;
+  height: auto;
+}
+.person-name {
+  margin-left: 1.5rem;
+}
+.name {
+  margin-bottom: 5px;
+}
+.person-job {
+  color: var(--clr-Soft-Pink);
+}
+/* Responsive Design */
+
+/* Desktop */
+@media screen and (min-width: 56em) {
+  body {
+    background-image: url(images/bg-pattern-top-desktop.svg),
+      url(images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+  }
+
+  .section {
+    margin: 8rem 10.25rem;
+  }
+  .section-center {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .header {
+    width: 50%;
+  }
+  .header-title {
+    font-size: 40px;
+  }
+  .stars {
+    width: 50%;
+  }
+  .people {
+    width: 100%;
+  }
+}
